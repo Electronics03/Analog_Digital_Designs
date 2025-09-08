@@ -80,22 +80,22 @@
 \end{figure}
 \cite{alexander2023fundamentals}에서 설명하는 RC High-Pass Filter 식을 사용하여 다음과 같이 계산할 수 있다.
 주기와 주파수의 관계는 다음과 같다:
-\[
+\begin{align}
     T = \frac{1}{f} = \frac{2\pi}{\omega}.
-\]
+\end{align}
 차단 주파수 $\omega_c$에서의 관계식은
-\[
+\begin{align}
     \omega_c = \frac{1}{RC}.
-\]
+\end{align}
 여기서 커패시터는 $C = 10\,\mu\mathrm{F}$로 고정이므로,
-\[
+\begin{align}
     R = \frac{1}{\omega_c C} = \frac{1}{2\pi f_c C}.
-\]
+\end{align}
 주어진 $f_c = 5\,\mathrm{Hz}$를 대입하면,
-\[
+\begin{align}
     R = \frac{1}{2\pi \times 5 \times 10 \times 10^{-6}}
     \approx 3.183\,\mathrm{k}\Omega
-\]
+\end{align}
 이 된다. 해당 값을 바탕으로 회로를 그리면 Fig.~(\ref{fig1})이다.
 
 
