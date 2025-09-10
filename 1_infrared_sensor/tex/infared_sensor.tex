@@ -42,7 +42,7 @@
     전자전기공학부\\
     \texttt{20232549}
 }
-\date{2025.9.8.}
+\date{2025.9.10.}
 \maketitle
 
 \section{실습 목적}
@@ -79,7 +79,7 @@
     \label{fig1}
 \end{figure}
 \cite{alexander2023fundamentals}에서 설명하는 RC High-Pass Filter 식을 사용하여 다음과 같이 계산할 수 있다.
-주기와 주파수의 관계는 다음과 같다:
+주기와 주파수의 관계는 다음과 같다.
 \begin{align}
     T = \frac{1}{f} = \frac{2\pi}{\omega}.
 \end{align}
@@ -92,15 +92,17 @@
     R = \frac{1}{\omega_c C} = \frac{1}{2\pi f_c C}.
 \end{align}
 주어진 $f_c = 5\,\mathrm{Hz}$를 대입하면,
-\begin{align}
+\begin{align}\label{eq1}
     R = \frac{1}{2\pi \times 5 \times 10 \times 10^{-6}}
     \approx 3.183\,\mathrm{k}\Omega
 \end{align}
-이 된다. 해당 값을 바탕으로 회로를 그리면 Fig.~(\ref{fig1})이다.
+이 된다.
+(\ref{eq1})의 값을 바탕으로 회로를 그리면 Figure~\ref{fig1}이다.
 
 
 \subsection{Op-amp 반전증폭기를 2-stage 로 연결하여 적외선 센서의 출력신호에 변화가 생길 경우 그 신호를 증폭시키는 회로를 설계하시오. (단, Gain 이 10000 V/V 가 되도록 설계하시오.)\label{sec2}}
 반전 증폭기의 Gain은 \cite{alexander2023fundamentals}, \cite{ele}와 같이 구할 수 있다.
+
 \begin{align}
     V_{out} = -\frac{R_f}{R_1}\cdot V_{in}
 \end{align}
@@ -110,8 +112,7 @@
     \item 두번째 증폭 단에서 $-\frac{R_f}{R_1} = -\frac{R_5}{R_3} = -100$
     \item 총 증폭 값 : $-100\times-100 = 10000~(V/V)$
 \end{itemize}
-해당 값을 적용한 증폭회로는 Fig.~(\ref{fig2})이다.
-
+해당 값을 적용한 증폭회로는 Figure~\ref{fig2}이다.
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.7\linewidth]{figures/fig2.png}
@@ -120,7 +121,8 @@
 \end{figure}
 
 \subsection{\ref{sec2}의 Op-amp의 출력신호를 이용하여 센서의 움직임 검출 신호를 LED 점등으로 확인할 수 있는 회로를 추가하시오.}
-\ref{sec1}, \ref{sec2} 에서 계산한 값을 바탕으로 회로도를 그리면 Fig.~(\ref{fig3})이다.
+\ref{sec1}, \ref{sec2} 에서 계산한 값을 바탕으로 회로도를 그릴 수 있다.
+LED를 추가한 회로의 형태는 \cite{ele}를 참고하였다. 그린 회로는 Figure~\ref{fig3}이다.
 
 \begin{figure}[H]
     \centering
